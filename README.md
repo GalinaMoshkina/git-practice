@@ -12,7 +12,13 @@
 2.  Переходим в папку репозитория с помощью `cd lab5`
 3.  Проверяем наличие папки `.git/hooks/ с помощью команды ls -la .git/hooks/ ![image](https://github.com/user-attachments/assets/82323e88-19ba-4936-9317-49d57e5c31a7) 
 
-4.  
+4.  Заходим в папку `.git/hooks/` с помощью `cd` и создаем файл `pre-commit`.
+5.  Вписываем туда код: ![Uploading Снимок экрана от 2024-12-18 20-48-02.png…]() 
+
+6.  создаем 2 файла в /home/user/lab5: 11example.txt (с автором) и 22example.txt (без автора) с помощью команды `touch`, с помощью команды `gedit` изменяем эти файлы. ![Снимок экрана от 2024-12-19 17-53-44](https://github.com/user-attachments/assets/6cbcc569-f8a1-415f-9ddf-accac61bcacd) 
+
+![image](https://github.com/user-attachments/assets/6432f7ce-81ce-4afc-9651-80ce0886693a) 
+5. 
 
 ## Задание 2 - Использование Git Flow в проекте
  
