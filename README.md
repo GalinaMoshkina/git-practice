@@ -34,25 +34,27 @@ git push origin main
  
 Предположим, у вас есть задача на создание новой функциональности для вашего проекта с использованием Git Flow. Давайте рассмотрим конкретный пример. В примере важен не сам проект и его код (его тут вообще как такового нет), а принцип работы Git Flow.
 
-1. Убедитесь, что Git Flow установлен на локальной машине:
+### Решение 
+1. Устанавливаем git-flow: 
 
 ```
 sudo apt-get install git-flow
 ```
 
-2. В корне репозитория выполните инициализацию Git Flow.
+2. В корне репозитория выполняем инициализацию Git Flow.
 
 ```
 git flow init
 ```
 
-3. Создайте ветку для новой функциональности, допустим она называется "task-management":
+3. Создаем ветку для новой функциональности, которая называется "task-management":
 
 ```
 git flow feature start task-management
 ```
 
-4. Внесите изменения в код для добавления функционала управления задачами (например, в файл task_manager.py):
+4. Внесите изменения в код для добавления функционала управления задачами (например, в файл task_manager.py): ![image](https://github.com/user-attachments/assets/e9899b27-6706-4fee-8ee4-12ab2d847fa6) 
+
 
 ```
 def create_task(title, description):
@@ -60,7 +62,8 @@ def create_task(title, description):
     print(f"Создана новая задача: {title}")
 ```
 
-Выполните коммит изменения по мере разработки:
+Выполняем коммит изменения по мере разработки: ![image](https://github.com/user-attachments/assets/f301b80e-7c52-45ef-97ac-d8f48bc7ba7a) 
+
 
 ```
 git add task_manager.py
@@ -69,7 +72,8 @@ git commit -m "Добавлен функционал управления зад
 
 ```
 
-5. После завершения разработки функции завершите фичу и объедините ее с основной веткой:
+5. После завершения разработки функции завершаем фичу и объединяем ее с основной веткой: ![image](https://github.com/user-attachments/assets/b18799a2-4aff-43c7-b62a-4fdb0dd48da3) 
+
 
 ```
 git flow feature finish task-management
@@ -78,7 +82,8 @@ git flow feature finish task-management
 
 Git Flow автоматически переключится на ветку develop и выполнит слияние. Если есть конфликты, их нужно разрешить.
 
-6. Переключитесь на ветку "develop" и начните создание релиза:
+6. Переключаемся на ветку "develop" и начинаем создание релиза: ![image](https://github.com/user-attachments/assets/8693fb63-4cef-4f74-98da-60c1e2f71d37) 
+
 
 ```
 git checkout develop
@@ -94,19 +99,22 @@ git commit -m "Обновлена версия для релиза v1.0.0"
 
 ```
 
-8. Завершите релиз и объедините его с ветками "develop" и "main":
+8. Завершите релиз и объедините его с ветками "develop" и "main": ![image](https://github.com/user-attachments/assets/8abd8c7c-ce43-4d95-98f3-c182e9616acc) 
+
 
 ```
 git flow release finish v1.0.0
 ```
 
-9. Если в процессе использования выявлена критическая ошибка, создайте hotfix (у нас конечно же ошибки никакой не возникнет, но hotfix все равно создаем):
+9. Если в процессе использования выявлена критическая ошибка, создайте hotfix (у нас конечно же ошибки никакой не возникнет, но hotfix все равно создаем): ![image](https://github.com/user-attachments/assets/8b2c42b8-b983-443c-b9f8-a53a6e11f17f) 
+
 
 ```
 git flow hotfix start hotfix-1.0.1
 ```
 
-10. Внесите изменения для исправления ошибки и коммитите:
+10. Внесите изменения для исправления ошибки и коммитите: ![image](https://github.com/user-attachments/assets/3f367967-cd35-4300-b738-0e3ba82df333) 
+
 
 ```
 # Исправление ошибки
@@ -114,13 +122,15 @@ git add file_with_error.py
 git commit -m "Исправлена критическая ошибка"
 ```
 
-11. Завершите hotfix и объедините его с ветками "develop" и "main":
+11. Завершите hotfix и объедините его с ветками "develop" и "main": ![image](https://github.com/user-attachments/assets/2a053ce7-3f46-4780-b6bf-6bd2d7412562) 
+
 
 ```
 git flow hotfix finish hotfix-1.0.1
 ```
 
-12. Завершение работы и отправка изменений на удаленный репозиторий. Отправьте изменения на удаленный репозиторий:
+12. Завершение работы и отправка изменений на удаленный репозиторий. Отправьте изменения на удаленный репозиторий: ![image](https://github.com/user-attachments/assets/5a625646-ec16-4ec9-9203-34fc3bff60cf) 
+
 
 ```
 git push origin develop
