@@ -13,12 +13,22 @@
 3.  Проверяем наличие папки `.git/hooks/ с помощью команды ls -la .git/hooks/ ![image](https://github.com/user-attachments/assets/82323e88-19ba-4936-9317-49d57e5c31a7) 
 
 4.  Заходим в папку `.git/hooks/` с помощью `cd` и создаем файл `pre-commit`.
-5.  Вписываем туда код: ![Uploading Снимок экрана от 2024-12-18 20-48-02.png…]() 
+5.  Вписываем туда код: ![Снимок экрана от 2024-12-18 20-48-02](https://github.com/user-attachments/assets/4075d760-681a-47db-88e8-a6c479052cdd) 
+6. Сделаем файл исполняемым с помощью команды `chmod +x pre-commit`
 
-6.  создаем 2 файла в /home/user/lab5: 11example.txt (с автором) и 22example.txt (без автора) с помощью команды `touch`, с помощью команды `gedit` изменяем эти файлы. ![Снимок экрана от 2024-12-19 17-53-44](https://github.com/user-attachments/assets/6cbcc569-f8a1-415f-9ddf-accac61bcacd) 
+7.  Создаем файл в /home/user/lab5 22example.txt (без автора) с помощью команды `touch`, с помощью команды `gedit` изменяем файл. 
 
 ![image](https://github.com/user-attachments/assets/6432f7ce-81ce-4afc-9651-80ce0886693a) 
-5. 
+8. Попробуем сделать коммит и отправить в репозиторий файл 22example.txt 
+```
+git add task_1_1.txt
+git commit -m "Добавлен корректный текстовый файл"
+git push origin main
+```
+На скриншоте вместо "Добавлен корректный текстовый файл" будет "любой" 
+![image](https://github.com/user-attachments/assets/f8cbe4f7-5f07-4adb-8885-964e36128378)
+
+
 
 ## Задание 2 - Использование Git Flow в проекте
  
